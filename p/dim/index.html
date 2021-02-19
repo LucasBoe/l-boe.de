@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Balthazar" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
+		<title>DIM: a light in the dark</title>
+	</head>
+	<body>
+		<div id="header">
+			
+		</div>
+		<div id="side">
+			<img id=title src="DIM_title1.png">
+			<div id="download">Download on Itch.io</div>
+		</div>
+		<div id="page">
+			<div id="top">
+			<a target="_blank" rel="noopener noreferrer" href="https://lucamartinelli.itch.io/dim"><div style="width: 100%; height: 100%;"></div></a></div>
+
+			<div id="cont">
+
+				<div id="about">
+					<h1>About</h1>
+					<div class="double-text">
+						<div class="single-text">
+							<p>Dim is a atmospheric puzzle game.</p>
+							<p>Explore your way trough the factory by tricking the machines and solving difficult situations.</p>
+						</div>
+						<div class="single-text">
+							<i>First came the dark black clouds, covering the once blue and lightful sky. Then the gray snow started to fall and never ended.
+							It raised into a cold and deadly storm.
+						Darkness and isolation followed.</i>
+						</div>
+					</div>
+				</div>
+
+				<div id="teaser">
+					<h1>Teaser</h1>
+					<iframe width="60%" height="60%" src="https://www.youtube-nocookie.com/embed/PGA3cG3Bsdo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<div id="team">
+					<ul>
+						<li>
+							<img src="team/jean.jpeg">
+							<h4>Jean Isserstedt</h4>
+							<p>Producer, Asset Production</p>
+							<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jean-isserstedt-17b173145/">Contact on LinkedIn</a>
+						</li>
+						<li>
+							<img src="team/max.jpg">
+							<h4>Maximilian Pichler</h4>
+							<p>Character & Monster/Enemy Design</p>
+							<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/maximilian-pichler-a688809a/">Contact on LinkedIn</a>
+						</li>
+						<li>
+							<img src="team/alex.jpeg">
+							<h4>Alexander von Anhalt</h4>
+							<p>Sound Design, Mechanic Design, Rigging</p>
+							<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/alexander-von-anhalt-053217152/">Contact on LinkedIn</a>
+						</li>
+						<li>
+							<img src="team/luca.jpeg">
+							<h4>Luca Martinelli</h4>
+							<p>Programming, Mechanic Design</p>
+							<a target="_blank" rel="noopener noreferrer" href="mailto:Lucaandre.martinelli@ue-germany.de">Lucaandre.martinelli@ue-germany.de</a>
+						</li>
+						<li>
+							<img src="team/lucas.jpeg">
+							<h4>Lucas Bödeker</h4>
+							<p>Creative Direction, Level & Environment Design</p>
+							<a target="_blank" rel="noopener noreferrer" href="http://l-boe.de">View Website</a>
+						</li>
+					</ul>
+				</div>
+
+				<div id="press">
+
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+					<style>
+					.mySlides {display:none;}
+					</style>
+
+					<div class="w3-content w3-display-container" style="height: 800px; overflow: hidden;">
+					  	<img class="mySlides" src="FireknightMainPage-1024x724.png">
+						<img class="mySlides" src="Pick-Goat.jpg">
+						<img class="mySlides" src="pICkcAMEL-o18zgumvmvdv887r04zok81ohxamq4dj44dgmlvxuw.png">
+						<img class="mySlides" src="camelgoat2.png">
+						<img class="mySlides" src="Ennemis_Grablinghook-768x1024.jpg">
+						<img class="mySlides" src="Fledermaus-768x1086-2.png">
+
+
+					  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+					</div>
+
+					<script>
+					var slideIndex = 1;
+					showDivs(slideIndex);
+
+					function plusDivs(n) {
+					  showDivs(slideIndex += n);
+					}
+
+					function showDivs(n) {
+					  var i;
+					  var x = document.getElementsByClassName("mySlides");
+					  if (n > x.length) {slideIndex = 1}
+					  if (n < 1) {slideIndex = x.length}
+					  for (i = 0; i < x.length; i++) {
+					    x[i].style.display = "none";  
+					  }
+					  x[slideIndex-1].style.display = "block";  
+					}
+					</script>
+
+				</div>
+				<div style="height: 500px;"></div>
+			</div>
+		</div>
+		<ul id="nav">
+			<li class="current"><a href="#top">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#teaser">Teaser</a></li>
+			<li><a href="#team">Team</a></li>
+			<li><a href="#press">Press</a></li>
+		</ul>
+
+	</body>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="jquery.nav.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</html>

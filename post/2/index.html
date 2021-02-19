@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../main.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<title>Lucas B - Blog</title>
+</head>
+<body>
+	<div id="wrapper">
+		<div id=blogPage>
+
+			<!-- gets filled with header segment -->
+			<div id="header"></div>
+
+			<!-- gets filled with nav segment-->
+			<div id="blognav" class="blognav_disabled content"></div>
+
+			<!-- holds the blogpost itself-->
+			<div class="content">
+					<section class="blogentry" id="watson">
+						<h2>Making a Detective Game</h2>
+						<p>Making a real detective game. That was the Idea I had in my mind, while inventing the basic design of “a Case for Watson”. For me that meant, to NOT give the player any feedback whether he/she is progressing by solving the crime or not. No flickering elements in the environment that tell you directly that they are important ore interactable.</p>
+						<img src="images/Watson_CrimeScene.jpg">
+		
+						<p>The main ways to get information, were the dialogues and the environment. For that, most of the dialogues have hidden markers, which store information in a certain sentence. It includes topical tags like “war” to real clues, like “the victim played piano right before he was found dead”. The player is able to save things the NPC’s  say.</p>
+						<p>Same goes for the environment. In every detective game there is blood at strange places and potential murder weapons all over the place. Instead of letting the player take all objects with him/her, we had a different approach.</p>
+							
+		
+						<p>We let the players take drawings of everything. That had several reasons and upsides I want to talk about now.</p>
+						<ol>
+							<li>The Player can’t take things like splattered blood with him/her. And removing all evidences from the places they have been before sounds not like good detective work anyways, does it?</li>
+							<li>There was no direct feedback, whether the things you found were relevant or not. Like a real detective you really had to look around and think yourself, instead of trying out what you can click at.</li>
+							<li>We were able to easily make more abstract things, like missing objects available as evidence.</li>
+						</ol>
+
+						<img src="../../fullRes/sherlock_03.png">
+
+						<p>This drawing also had the same type of clues hidden inside, depending on what you took a photo of.</p>
+						<p>With both, the dialogue parts and the pictures, you can go to any NPC’s and show them the things another person said, or the ones you found in the environment. They will comment on that now. If you, for example, show them a picture of the cake you found in kitchen they will tell you about Elizabeth making a cake, whether they knew it or not. Their answer also has a clue in it. Clarice for example may tell you, that she didn’t know Elizabeth was making a cake, because she was giving a concert. Now you are able to ask her about the concert, and so on.</p>
+						<p>Sadly, we had to cut a feature of combining two clues to a new one. That would have generated too many possible combinations, we were simply not able to create answers for.</p>
+						<p>But as a detective, you must be able to deduct, and expose lies. To do that you confront a NPC’s with a statement that conducts the things they told you before.</p>
+							
+						<img src="../../fullRes/sherlock_02.png">
+		
+						<p>To prevent the player from getting lost in the dialogues, I ensured them to be highly interconnected. There are several big topics, like war, green, as Richards favorite color and the piano. All these topics intersect one another. Richard suffered from war, that led to some weird habits, like loving green and hating red and the strict timeslots he used for playing the piano. Of course, on a larger scale and the different characters play a lot of roles, by stating their opinion to the victim, the murder and the relations between all characters.</p>
+						<p>At any point in time you can always leave the scenery to wait for sherlock. That means you think you have seen enough and know anything to correctly identify the murderer.</p>
+						<p>In a final dialogue with him, you name the murderer and answer the key questions, by showing dialogue or picture evidences, you think of as prove.  The key questions are: when, who, why and how. In the end you get a final score, calculated based on how many correct evidences you had. You are able to get back to the crime scene in order to improve.</p>		
+						<img src="images/Watson_SherlockInterview.jpg">
+	
+						<p>In the end, the game is more experimental than I imagined it to be. But I think if you get used to the way the game tells its story you can have a very interesting experience. I learned a lot during the creation and improvement of the games mechanics, some of the key ideas can be used as inspiration for future projects, like the picture taking mechanic.</p>
+					</section>
+			</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+	<script type="text/javascript" src='../../js/blog.js'></script>
+</html>

@@ -1,0 +1,238 @@
+//css
+
+* { box-sizing: border-box; margin: 0; padding: 0; border: 0; }
+
+#close {
+  position: absolute;
+  top: 40vh;
+  left: 0;
+}
+
+#projectPage {
+  background-color: black;
+  max-height: 100%;
+  overflow-x: hidden;
+  perspective: 1px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+  padding: 0 0;
+
+}
+
+#projectPage h1,
+#projectPage h2,
+#projectPage h3,
+#projectPage h4 {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+#projectPage #header {
+  height: 40vh;
+}
+
+#projectPage #header #headerImageContainer {
+  width: 100vw;
+  height: 60vw;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  vertical-align: top;
+  transform-origin: center top;
+  transform: translateZ(-3px) scale(4);
+  z-index: -1;
+  }
+
+  @-moz-document url-prefix() {
+    #projectPage #header #headerImageContainer {
+      transform: translateZ(-3px) scale(1);
+      }
+}
+
+  #projectPage #header img {
+    background-size: cover;
+    width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+      z-index: -1;
+      /*transition: filter 1s ease 0s;*/
+        }
+
+  #projectPage #header #imageFade {
+    width: 100vw;
+    height: 50%;
+    background: linear-gradient(rgba(0,0,0,0), 40%, black);
+    position: absolute;
+    display: block;
+    top: 50%;
+  }
+  
+  #projectPage #content #title {
+    text-align: center;
+    position: absolute;
+    font-size: 5vw;
+    font-weight: 150;
+    left: 0;
+    top: -25vh;
+    width: 100%;
+    text-shadow: 
+    black 1px 1px 16px,
+    black 1px 1px 8px,
+    black 1px 1px 4px;
+  }
+
+  #projectPage #content {
+    width: 64vw;
+    float: left;
+    margin: 22vw 14vw 4vh;
+    padding: 2vh 4vw 12vh;
+    justify-content: center;
+    font-weight: 100;
+    position: relative;
+    overflow: visible;
+    transform: translateZ(0);
+    background: black;
+    box-shadow: rgba(0,0,0,0.5) 4px -2px 6px;
+  }
+
+  #projectPage .contentContainer {
+		width: 100%;
+		float: left;
+		padding: 0 0;
+		justify-content: center;
+		font-weight: 100;
+		position: relative;
+		overflow: visible;
+  }
+
+  #projectPage .textContainer {
+    width: 46%;
+    padding: 2%;
+    display: block;
+    justify-content: center;
+    float: left;
+  }
+		#projectPage .videoContainer {
+      width: 46%;
+      padding: 2%;
+		display: block;
+		position: relative;
+		justify-content: center;
+		float: left;
+		}
+
+		#projectPage .imageContainer {
+      width: 46%;
+      padding: 2%;
+			display: block;
+			position: relative;
+			justify-content: center;
+			float: left;
+		}
+
+			#projectPage .imageContainerBig {
+			width: 96%;
+			padding: 2%;
+			display: box;
+			justify-content: center;
+			float: left;
+			}
+
+			#projectPage span {
+				width: 100%;
+				text-align: center;
+				font-style: italic;
+				display: block;
+			}
+
+			#projectPage img {
+				width: 100%;
+			}
+
+			#projectPage .contentContainer a {
+				padding: 6px 8px;
+				text-decoration: none;
+				color: white;
+				border: 1px solid white;
+				margin-left: 20px;
+			}
+
+			#projectPage .contentContainer h3 a {
+				padding: 0;
+				text-decoration: none;
+				font-style: italic;
+				color: white;
+				border: none;
+				margin: 5px;
+      }
+
+      @media only screen and (max-width: 1200px) {
+  
+        #projectPage #content {
+          width: 80vw;
+          margin: 22vw 8vw 4vh;
+          padding: 2vh 2vw 12vh;
+        }
+      }
+      
+      @media only screen and (max-width: 1000px) {
+
+        #projectPage .imageContainer {
+          width: 96%;
+        }
+
+        #projectPage .videoContainer {
+          width: 96%;
+        }
+  
+        #projectPage .imageContainerBig {
+          width: 96%;
+        }
+  
+        #projectPage .textContainer {
+        width: 96%;
+          }
+      }
+
+      @media only screen and (max-width: 800px) {
+  
+        #projectPage #content {
+          width: 94vw;
+          margin: 22vw 0 4vh;
+          padding: 2vh 2vw 12vh;
+        }
+      }
+
+  #close {
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    font-family: times;
+    font-weight: normal;
+    font-size: 96px;
+    font-weight: 200px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  #close a:hover {
+    border: none;
+  }
+
+  #close:before {
+    font-family: FontAwesome;
+    font-size: 64px;
+    width: 128px;
+    height: 128px;
+  }
+
+  #close .label {
+    display: none;
+  }
+
+
+
+html, body { height: 100%; }
+
+

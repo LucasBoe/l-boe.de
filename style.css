@@ -1,0 +1,495 @@
+body {
+	margin: 0;
+	background-color: black;
+    background-size: 1.5vw;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	color: white;
+	overflow-x: hidden;
+}
+
+#mainPage {
+	width: 100%;
+	overflow: hidden;
+	/*background-color: blue;*/
+}
+
+	#mainPage .slider {
+		height: 40vh;
+		width: 200vw;
+		overflow: hidden;
+		transition: transform 1s ease;
+
+		/*
+		background-color: red;
+		*/
+	}
+
+		#mainPage .slider .projects {
+			height: 100%;
+			width: 100vw;
+			float: left;
+			/*
+			background-color: green;
+			*/
+			
+			/*
+			-moz-animation: moveRight 30s linear infinite; //Firefox 
+			-webkit-animation: moveRight 30s linear infinite; //Safari and Chrome
+			-o-animation: moveRight 30s linear infinite; //Opera
+			-ms-animation: moveRight 30s linear infinite; //IE 10
+			animation: moveRight 30s linear infinite;
+			*/
+			
+		}
+
+		#mainPage .slider:hover .projects {
+     		animation-play-state: paused !important;
+     		/*animation-duration: 60s;*/
+		}
+
+
+			#mainPage .slider .projects .project {
+				position: relative;
+				height: 100%;
+				float: left;
+			}
+				#mainPage .slider .projects .project .info {
+					/*display: none;*/
+				}
+
+				#mainPage .slider .projects .project img {
+					height: 100%;
+				}
+
+				#mainPage .slider .projects .project .thumbnail {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					text-align: center;
+					top: 0;
+					left: 0;
+					padding-top: 21%;
+					color: rgba(0,0,0,0);
+					opacity: 0;
+					transition: opacity 0.5s ease;
+				}
+
+				#mainPage .slider .projects .project .thumbnail h2{
+					font-size: 36px;
+					font-weight: 100;
+					letter-spacing: 2px;
+					text-shadow: 0px 0px 8px black;
+					margin-bottom: 0px;
+				}
+
+				#mainPage .slider .projects .project .thumbnail h3{
+					font-size: 24px;
+					font-weight: 100;
+					margin-top: 0px;
+					text-shadow: 0px 0px 8px black;
+				}
+
+				#mainPage .slider .projects .project .thumbnail p {
+					font-size: 17px;
+					padding: 0px 100px;
+					text-shadow: 0px 0px 4px black;
+				}
+
+				#mainPage .slider .projects .project .thumbnail:hover{
+					box-shadow: inset 0px 0px 50px black;
+					background-color: rgba(0,0,0,0.33);
+					opacity: 1;
+					color: white;
+				}
+	#mainPage .middle {
+		height: 20vh;
+		width: 100vw;
+		background-color: black;
+		
+		font-size: 24pt;
+		letter-spacing: 10px;
+		overflow: hidden;
+		animation: fadein 2s;
+	}
+
+	#mainPage .middle h1{
+		position: absolute;
+		top: 43vh;
+		left: 38vw;
+		transition: top 0.5s;
+		font-size: 6vh;
+		font-weight: 100;
+	}
+
+	#mainPage .middle h2{
+		position: absolute;
+		top: 50vh;
+		left: 41vw;
+		opacity: 0;
+		font-size: 4vh;
+		transition: opacity 0.5s , top 0.5s;
+		font-weight: 100;
+	}
+
+	#mainPage .middle:hover {
+		cursor: pointer;
+	}
+
+	#mainPage .middle:hover h1 {
+		top: 40vh;
+	}
+
+	#mainPage .middle:hover h2 {
+		top: 48vh;
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	#overlay {
+		position: absolute;
+		top: 20vh;
+		height: 60vh;
+		width: 100vw;
+		margin: 0 auto;
+		animation: fadein 2s;
+	}
+
+		#overlay h1 {
+			float: left;
+			padding-top: 20vh;
+			padding-left: 20px;
+			font-weight: 100;
+			}
+
+		#overlay img {
+			float: left;
+			height: 60vh;
+			padding-left: 10pt;
+			padding-top: 20vh;
+		}
+
+		#overlay #text {
+			float: left;
+			width: 40vw;
+			height: 10vh;
+			padding-top: 20vh;
+			padding-left: 10vw;
+			background-color: none;
+		}
+
+.projectPage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+	.projectPage #header {
+		width: 100vw;
+		height: 100vh;
+		/*background-color: rgba(100,0,100,0.25);*/
+	}
+
+	
+	.projectPage object {
+		width: 100%;
+		height: 100vh;
+		overflow-y: visible;
+		padding: 0;
+		margin: 0;
+	}
+
+#projectDetailPage {
+}
+
+	#projectDetailPage #header {
+		width: 100vw;
+		height: 50vh;
+		overflow: hidden;
+	}
+
+		#projectDetailPage #header img {
+			width: 100vw;
+			height: auto;
+		}
+
+		#projectDetailPage #headerOverlay {
+			width: 100vw;
+			height: 50vh;
+			position: absolute;
+			top: 0;
+			left: 0;
+			/*box-shadow: inset 0px -50px 50px black;*/
+			animation: fadein 1s;
+		}
+
+			#projectDetailPage #headerOverlay h1 {
+				font-size: 6vw;
+				font-weight: 100;
+				letter-spacing: 5px;
+				font-weight: 100;
+				/* position: absolute; */
+				/* bottom: 60px; */
+				/* right: 20px; */
+				text-shadow: 3px 3px black;
+				text-align: center;
+				padding-top: 10vh;
+			}
+
+			#projectDetailPage #headerOverlay .icon, #contactPage .icon {
+				text-decoration: none;
+				color: white;
+				position: fixed;
+				font-family: times;
+				font-weight: normal;
+				font-size: 96px;
+				font-weight: 200px;
+				left: 25px;
+				cursor: pointer;
+			}
+
+			#projectDetailPage #headerOverlay .icon:before, #contactPage .icon:before{
+				font-family: FontAwesome;
+				font-size: 64px;
+				width: 128px;
+				height: 128px;
+			}
+
+			#projectDetailPage #headerOverlay .label, #contactPage .label{
+				display: none;
+			}
+
+	#projectDetailPage .contentContainer {
+		width: 64vw;
+		float: left;
+		padding: 0 3vw;
+		margin-left: 15vw;
+		justify-content: center;
+		font-weight: 100;
+		position: relative;
+		overflow: visible;
+	}
+		#projectDetailPage .videoContainer {
+		width: 28vw;
+		padding: 2vw;
+		display: block;
+		position: relative;
+		justify-content: center;
+		float: left;
+		}
+
+		#projectDetailPage .imageContainer {
+			width: 28vw;
+			padding: 2vw;
+			display: block;
+			position: relative;
+			justify-content: center;
+			float: left;
+		}
+
+			#projectDetailPage .imageContainerBig {
+			width: 60vw;
+			padding: 2vw;
+			display: box;
+			justify-content: center;
+			float: left;
+			}
+
+			#projectDetailPage span {
+				width: 100%;
+				text-align: center;
+				font-style: italic;
+				display: block;
+			}
+
+			#projectDetailPage img {
+				width: 100%;
+			}
+
+			#projectDetailPage .contentContainer a {
+				padding: 6px 8px;
+				text-decoration: none;
+				color: white;
+				border: 1px solid white;
+				margin-left: 20px;
+			}
+
+			#projectDetailPage .contentContainer h3 a {
+				padding: 0;
+				text-decoration: none;
+				font-style: italic;
+				color: white;
+				border: none;
+				margin: 5px;
+			}
+
+		#projectDetailPage .textContainer {
+			width: 29vw;
+			padding: 2vw 1vw;
+			display: box;
+			justify-content: center;
+			float: left;
+		}
+		
+		#projectDetailPage h1 {
+			font-weight: 150;
+		}
+
+
+		@media only screen and (max-width: 1000px) {
+	
+			#projectDetailPage .imageContainer {
+				width: 100%;
+			}
+
+			#projectDetailPage .imageContainerBig {
+				width: 100%;
+			}
+
+			#projectDetailPage .textContainer {
+			width: 100%;
+				}
+		}
+
+
+@media only screen and (max-width: 1000px) {
+
+		#mainPage .slider {
+			position: absolute;
+			top: 20vh;
+			width: 100vw;
+			height: 80vh;
+			overflow: scroll;
+			transition: transform 1s ease;
+
+			/*
+			background-color: red;
+			*/
+		}
+
+			#mainPage .slider .projects .project {
+				position: relative;
+				height: 55vw;
+				overflow: hidden;
+				float: none;
+				text-align: center;
+			}
+
+			#mainPage .slider .projects .project .thumbnail, #mainPage .slider .projects .project .thumbnail:hover {
+					box-shadow: inset 0px 0px 25px black;
+					/*background-color: rgba(0,0,0,0.33);*/
+					background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5) 60%);
+					text-align: center;
+					padding-top: 26%;
+					opacity: 1;
+					color: white;
+				}
+
+
+				#mainPage .slider .projects .project .thumbnail h2{
+					font-size: 28px;
+					letter-spacing: 0px;
+					text-shadow: 0px 0px 8px black;
+					margin-bottom: 0px;
+				}
+
+				#mainPage .slider .projects .project .thumbnail h3{
+					font-size: 22px;
+					margin-top: 0px;
+					text-shadow: 0px 0px 8px black;
+				}
+
+				#mainPage .slider .projects .project .thumbnail p {
+					font-size: 16rpx;
+					padding: 0px 50px;
+					text-shadow: 0px 0px 4px black;
+				}
+
+
+			#mainPage .middle {
+				position: absolute;
+				height: 20vh;
+				top: 0;
+			}
+
+					#mainPage .middle h1{
+						top: 0;
+						left: 2%;
+					}
+
+					#mainPage .middle h2{
+						left: 8%;
+					}
+
+						#mainPage .middle:hover h1 {
+							top: -30%;
+						}
+
+						#mainPage .middle:hover h2 {
+							top: 20%;
+						}
+
+		#overlay {
+			position: absolute;
+			top: 20vh;
+			height: 80vh;
+			width: 100vw;
+			margin: 0 auto;
+			animation: fadein 1s;
+			background-color: rgba(0,0,0,0.8);
+		}
+
+			#overlay h1 {
+				float: none;
+				position: absolute;
+				margin-top: 15vh;
+				margin-left: 5vw;
+				width: 40vw;
+				padding: 0;
+				font-weight: 100;
+				}
+
+			#overlay img {
+				float: none;
+				position: absolute;
+				width: 40vw;
+				height: auto;
+				margin-left: 5vw;
+				margin-top: 25vh;
+				padding: 0;
+			}
+
+			#overlay #text {
+				float: none;
+				position: absolute;
+				width: 40vw;
+				height: 60vh;
+				margin-top: 20vh;
+				margin-left: 50vw;
+				padding: 0;
+				background-color: none;
+			}
+	}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/*
+@keyframes moveRight
+{
+	0% { transform: translate(-125vw);}
+	100% {transform: translate(0);}
+}
+
+@keyframes moveLeft
+{
+	0% { transform: translate(0);}
+	100% {transform: translate(-125vw);}
+}
+*/

@@ -1,0 +1,511 @@
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	background-color: #000000;
+	background-size: 1.5vw;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+	a:hover {
+		border-bottom: 1px solid grey;
+	}
+
+p {
+	line-height: 140%;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+
+#mainPage {
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+#mainPage #header, #blogPage #header, #aboutPage #header, #wrapper #header {
+		text-align: center;
+		width: 60vw;
+		margin-left: 20vw;
+		position: relative;
+	}
+
+	#imprint {
+		position: absolute;
+		right: 0;
+		top: 5px;
+		opacity: 0.5;
+		cursor: pointer;
+		font-size: 12pt;
+	}
+
+		#header #navbar {
+			transform: translate(-20px,0);
+		}
+
+			#header #navbar li{
+		  		display: inline;
+		  		padding: 0 20px;
+		  		color: darkgray;
+		  		cursor: pointer;
+			}
+
+			#header #navbar a {
+				text-decoration: none;
+				color: inherit;
+			} 
+
+			#header #navbar .active {
+				color: white;
+			}
+
+	#mainPage #tagarea {
+		width: 60vw;
+		margin-left: 20vw;
+		position: relative;
+		height: 100px;
+		color: darkgray;
+	}
+		#mainPage #tagarea #description {
+			width: 50%;
+		}
+
+		#mainPage #tagarea h2 {
+			width: 100%;
+			margin: 0;
+			transform: translate(0,22px);
+			font-size: 14pt;
+		}
+
+		#mainPage #tagarea span {
+			position: relative;
+			border: 1px solid darkgray;
+			padding: 4px 6px;
+			margin-left: 1%;
+			font-size: 10pt;
+			top: -6px;
+			cursor: pointer;
+		}
+
+		#mainPage #tagarea .activeTag {
+			background-color: white;
+			border: 1px solid white;
+			color: black;
+
+		}
+
+		#mainPage #tagarea .activeTags {
+			position: absolute;
+			width: 50%;
+			left: 0;
+			top: 0;
+		}
+
+			#mainPage #tagarea .activeTags span {
+				opacity: 1;
+			}
+
+		#mainPage #tagarea .availableTags {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 50%;
+			text-align: right;
+		}
+
+	#mainPage #tagarea p, #mainPage #tagarea span {
+		color: lightgray;
+		transition: color 0.3s ease;
+		opacity: 1;
+	}
+
+	#mainPage #tagarea span:hover {
+		color: white;
+		border: 1px solid white;
+	}
+
+	#mainPage #tagarea .activeTag:hover {
+		color: black;
+
+	}
+
+
+	#mainPage #projects {
+		width: 60vw;
+		margin-left: 20vw;
+    	display: grid;
+    	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-rows: repeat(auto, 300px);
+	}
+
+	#mainPage #projects a {
+		transition: z-index 0.25s ease;
+	}
+
+	#mainPage #projects a:hover {
+		border: 0px;
+		overflow: visible;
+		z-index: 100;
+	}
+
+	#mainPage #projects .projectBox {
+		height: 300px;
+		position: relative;
+		overflow: hidden;
+	}
+
+		#mainPage #projects .projectBox img {
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+			transition: width 0.25s ease, height 0.25s ease, margin 0.25s ease;
+		}
+
+		#mainPage #projects .projectBox:hover img {
+			width: 105%;
+			height: 105%;
+			margin: -2.5%;
+		}
+
+		#mainPage #projects .projectBox ul {
+			position: absolute;
+			right: 20px;
+			top: 8px;
+		}
+
+		#mainPage #projects .projectBox li {
+			background-color: lightgray;
+			display: inline-block;
+			padding: 4px 6px;
+			margin: 0 2px;
+			opacity: 0;
+			transition: opacity 0.5s ease;
+			color: black;
+			mix-blend-mode: hard-light;
+			list-style: none;
+			font-size: 8pt;
+		}
+			#mainPage #projects .projectBox:hover li {
+				opacity: 1;
+				}	
+
+			#mainPage #projects .projectBox .thumbnail {
+				width: 80%;
+				height: 200px;
+				margin: 0;
+				padding: 100px 10% 0 10%;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				left: 0;
+				color: white;
+				opacity: 0;
+				transition: opacity 0.5s ease, width 0.25s ease, height 0.25s ease, margin 0.25s ease, padding 0.25s ease;
+			}
+				#mainPage #projects .projectBox .thumbnail:hover{
+					width: 85%;
+					height: 256px;
+					margin: -2.5%;
+					padding: 60px 10% 0 10%;
+					box-shadow: inset 0px 0px 50px black;
+					background-color: rgba(0,0,0,0.33);
+					border: 0px;
+					opacity: 1;
+				}
+
+			@media only screen and (max-width: 1000px) {
+	
+					#mainPage #tagarea #description {
+						width: 100%;
+					}
+	
+					#mainPage #tagarea .availableTags {
+						width: 100%;
+						padding-top: 20px;
+						position: relative;
+					}
+	
+					#mainPage #projects {
+						width: 80vw;
+						margin-left: 10vw;
+						transform: translate(0px, 50px);
+					}
+			}
+
+			@media (hover: none) and (pointer: coarse) {
+				/* For mobile phones: */
+				#mainPage #projects .projectBox .thumbnail{
+					box-shadow: inset 0px 0px 50px black;
+					background-color: rgba(0,0,0,0.33);
+					opacity: 1;
+				}
+			  }
+	#mainPage #wrongTags {
+		text-align: center;
+	}
+
+#aboutPage {
+		position: relative;
+	}
+
+	#aboutPage #profile {
+		border-radius: 50%;
+		width: 100%;
+		float: right;
+		margin: 19px 40px;
+		transform: scaleX(-1);
+	}
+
+	#aboutPage li {
+		list-style: none;
+	}
+	#aboutPage h3 {
+		transform: translate(20px,0);
+	}
+
+
+	.icon {
+		font-size: 24pt;
+		float: left
+	}
+
+	.icon img {
+		height: 21pt;
+		transform: translate(-1px,0);
+	}
+
+		#aboutPage li p {
+			font-size: 14pt;
+			line-height: 1.7;
+			margin-left: 40px;
+		}
+
+
+.content {
+		width: 60vw;
+		margin-left: 20vw;
+		position: relative;
+	}
+
+		.content .left-centered {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 40%;
+			text-align: center
+		}
+
+
+		.content .right {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 60%;
+		}
+
+		.content .blogentry {
+			width: 150%;
+			transform: translate(-20%,0);
+			padding-bottom: 50px;
+			/*border-top: 1px solid grey;*/
+		}
+
+			.content .blogentry h2 {
+				font-size: 32pt;
+				font-weight: lighter;
+			}
+
+			.content .blogentry p{
+				width: 40%;
+			}
+
+				.content .blogentry a {
+					padding: 4px 6px;
+					border: 1px solid white;
+				}
+
+				.content .blogentry ol, .content .blogentry ul{
+					width: 35%;
+				}
+
+
+			.content .blogentry img {
+				width: 55%;
+				transform: translate(80%,-15vh);
+				position: absolute;
+			}
+
+			.content .wide {
+				width: 100%;
+    			transform: inherit;
+			}
+
+			.content .wide p, .content .wide ol, .content .wide ul, .content .wide img{
+				width: auto;
+			}
+
+#blogPage ul {
+	list-style-type: none;
+}
+
+#blogPage li {
+	padding-top: 15px;
+}
+
+	#blogPage .content {
+		margin-left: 30vw;
+		width: 40vw;
+	}
+
+	#blogPage #header .title {
+		width: 40vw;
+		margin: auto;
+	}
+
+	#blogPage #header .title h1 {
+		font-weight: bold;
+		text-align: center;
+		margin: 0;
+		font-size: 64pt;
+	}
+
+	#blogPage #header .title #subtitle {
+		font-weight: lighter;
+		text-align: left;
+		font-size: 32pt;
+		transform: translate(2vw,2vh);
+		padding-top: 4vh;
+	}
+
+	#blogPage #blognav {
+		overflow: hidden;
+		padding: 10px 0;
+		transition: height 0.5s ease;
+	}
+
+	#blogPage #blognav li {
+		font-style: italic;
+		color: gray;
+	}
+
+	#blogPage #blognav a {
+		font-style: italic;
+		padding: 1px 3px;
+		/*border-bottom: 1px solid lightgrey;*/
+	}
+
+	#blogPage #blognav a:hover {
+		border-bottom: 1px solid grey;
+	}
+
+	.blognav_disabled {
+		height: 20px;
+	}
+
+	#blogPage #blognav #toggle {
+			color: gray;
+			cursor: pointer;
+			/*border: 1px solid white;
+			padding: 6px;
+			*/
+		}
+
+@media only screen and (max-width: 1000px) {
+
+	/*MAKE MONO*/
+	#blogPage .content {	
+		margin-left: 10vw;
+		width: 80vw;
+	}
+
+	.content .blogentry {
+		width: 100%;
+		transform: translate(0,0);
+	}
+
+	.content .blogentry p, .content .blogentry ol, .content .blogentry ul {
+		width: 100%;
+		transform: translate(0,0);
+	}
+
+	.content .blogentry img {
+		width: 100%;
+		transform: translate(0,0);
+		position: relative;
+	}
+
+	/*MAKE MONO*/
+	.content .left-centered {
+		position: relative;
+		width: 100%;
+	}
+
+
+	.content .right {
+		position: relative;
+		width: 100%;
+	}
+
+	#aboutPage #profile {
+		width: 50vw;
+		float: none;
+		padding: 20px 0;
+	}
+}
+
+#newBackgroundTriangle {
+	position: absolute;
+    width: 0;
+	height: 0;
+	top: 0;
+	left: 0;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid transparent; 
+	
+	border-left:20px solid black;
+	border-top:20px solid black;
+
+	border-width: 30px;
+
+	border-top-color: black;
+	border-left-color: black;
+
+	transition: border-width 1s ease-out,
+	border-top-color 1.5s ease-in-out,
+	border-left-color 1.5s ease-in-out;
+}
+
+#newBackgroundTriangle:hover {
+	border-width: 80px;
+	border-top-color: white;
+	border-left-color: white;
+	cursor: url('brush.ico'), auto;	
+}
+
+#newBackgroundTriangle:after{
+    content: 'try a new background?';
+	display: block;
+	text-align: center;
+    height: 40px;
+    width: 120px;
+    position: relative;
+	top: -40px;
+	left: -20px;
+	transform: scale(0.5);
+	opacity: 0;
+	transition: all 1.5s ease;
+}
+
+#newBackgroundTriangle:hover:after{
+	transform: scale(1);
+	opacity: 1;
+	top: -20px;
+    left: 0px;
+}

@@ -1,0 +1,81 @@
+body {
+    color: #a61f3d;
+    margin: 0;
+    background: black;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+#background {
+    /*here goes page css*/
+}
+
+    #background .sidebar {
+        width: 30vw;
+        float: right;
+        height: 100vh;
+        background: linear-gradient(to left, rgba(0, 15, 20, 1), rgba(0, 0, 0, 1));
+    }
+
+    #background .imagebox {
+        float: right;
+        min-width: 66vw;
+        max-width: 100vw;
+        min-height: 100vh;
+        max-height: 200vh;
+        overflow: visible;
+        background: linear-gradient(to left, rgba(0, 15, 20, 0) 75%, rgba(0, 15, 20, 1)), black url("../img/background_full.jpg") no-repeat center;
+        background-size: 100% auto;
+        background-position-y: 15%;
+    }
+
+#content {
+    position: absolute;
+    width: 25vw;
+    left: 5vw;
+    top: 30vh;
+}
+
+@media only screen and (max-aspect-ratio: 4/3) {
+    #background .sidebar {
+        width: 0;
+    }
+
+    #background .imagebox {
+        width: 100%;
+        min-height: 50vh;
+        height: 138.191vw;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1)), black url("../img/background_full.jpg") no-repeat top;
+        background-position-y: -30vw;
+        background-size: 100% auto;
+    }
+
+    #content {
+        position: absolute;
+        width: 40vw;
+        left: 30vw;
+        top: auto;
+        bottom: 10vh;
+    }
+}
+
+@media only screen and (max-aspect-ratio: 4/5) {
+    #background .sidebar {
+        width: 0;
+    }
+
+    #background .imagebox {
+        background-position-y: 0;
+    }
+
+    #content {
+        position: absolute;
+        width: 60vw;
+        left: 20vw;
+        top: auto;
+        bottom: 10vh;
+    }
+}
+
+img {
+    width: 100%;
+}
