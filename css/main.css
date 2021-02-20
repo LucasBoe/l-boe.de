@@ -486,7 +486,7 @@ h1, h2, h3, h4 {
 	border-width: 80px;
 	border-top-color: white;
 	border-left-color: white;
-	cursor: url('brush.ico'), auto;	
+	cursor: url('img/brush.ico'), auto;	
 }
 
 #newBackgroundTriangle:after{

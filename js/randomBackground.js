@@ -15,12 +15,12 @@ console.log("apply random background...");
   body = $("#content");
   
   for (let index = 0; index < 2; index++) {
-    body.css("background-image", "url(' ../../../../pattern/" + images[n] +"')");
+    body.css("background-image", "url(' ../../../img/pattern/" + images[n] +"')");
     body.css("background-color", colorsys.hsv2Hex(c,100,15));
   
     //for testing purpose I want the system to also work on my local machine
     if (window.location.protocol == 'file:') {
-      body.css("background-image", "url('pattern/" + images[n] +"')");
+      body.css("background-image", "url('img/pattern/" + images[n] +"')");
     }
   
     //not elegant but serves the purpose
