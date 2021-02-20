@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
+	<?php include 'img/svgMarker.php'; ?>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
@@ -24,11 +25,11 @@
 					<img id="profile" src="img/thumbnails/Profilbild.jpg">
 				</div>
 				<div class="right">
-				<h2>I'm a <b>Game Designer</b> & creator of interactive <b>Adventures</b> and <b>Films</b>, based in Berlin.</h2>
+				<h2>I'm a <strong>Game Designer</strong> & creator of interactive <strong>Adventures</strong><br> and <strong>Films</strong>, based in Berlin.</h2>
 
 				<p>I make games as a hobby since I have been able to talk.<br>I love to work on interesting ideas and develop them into compelling prototypes that people enjoy playing.<br>Games are my favourite medium because they are able to evoke emotions through their interactivity like no other.</p>
 
-				<h2>Core Skills:</h2>
+				<h3>Core Skills:</h3>
 				<ul>
 					<li>- Game Design</li>
 					<li>- Prototyping</li>
